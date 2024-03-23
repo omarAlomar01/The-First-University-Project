@@ -1,4 +1,4 @@
-/* start global rules */
+/* start gobal rules */
 :root {
   --blue-color: #0075ff;
   --blue-alt-color: #0d69d5;
@@ -353,12 +353,12 @@ ul {
 }
 /* end Tickets */
 /* start latest news */
-.latest .box:not(:last-child) {
+.latest-news .box:not(:last-child) {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
-.latest .box img {
+.latest-news .box img {
   width: 100px;
   margin-right: 10px;
   border-radius: 10px;
@@ -367,7 +367,45 @@ ul {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.latest .box .info {
+.latest-news .box .info {
   flex-grow: 1;
 }
 /* end latest news */
+/* start latest news */
+.latest-task .box:not(:last-child) {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.latest-task .done {
+  opacity: 0.3;
+}
+.latest-task .done h3,
+.latest-task .done p {
+  text-decoration: line-through;
+}
+.latest-task .box i {
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.latest-task .box i:hover {
+  color: var(--red-color);
+}
+
+/* end latest news */
+/* start latest uploads */
+.latest-uploads ul li:not(:last-child) {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.latest-uploads ul li img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+/* end latest uploads */

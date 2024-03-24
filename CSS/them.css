@@ -351,6 +351,11 @@ ul {
 .ticket .box.red:hover {
   border-color: var(--red-color);
 }
+@media (max-width: 767px) {
+  .ticket .box {
+    width: 100%;
+  }
+}
 /* end Tickets */
 /* start latest news */
 .latest-news .box:not(:last-child) {
@@ -370,8 +375,18 @@ ul {
 .latest-news .box .info {
   flex-grow: 1;
 }
+@media (max-width: 767px) {
+  .latest-news .box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .latest-news .box .info {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
 /* end latest news */
-/* start latest news */
+/* start latest task */
 .latest-task .box:not(:last-child) {
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -395,12 +410,11 @@ ul {
 .latest-task .box i:hover {
   color: var(--red-color);
 }
-
-/* end latest news */
+/* end latest task */
 /* start latest uploads */
 .latest-uploads ul li:not(:last-child) {
-  padding-bottom: 15px;
-  margin-bottom: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
 .latest-uploads ul li img {
@@ -409,3 +423,81 @@ ul {
   margin-right: 10px;
 }
 /* end latest uploads */
+/* start Last Project Progress */
+.last-project ul::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--blue-color);
+  left: 11px;
+}
+.last-project ul li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid white;
+  outline: 2px solid var(--blue-color);
+  border-radius: 50%;
+  display: block;
+  margin-right: 10px;
+  z-index: 1;
+}
+.last-project ul .done::before {
+  background-color: var(--blue-color);
+}
+.last-project ul .current::before {
+  background-color: white;
+  animation: current 1s linear;
+  -webkit-animation: current 1s infinite alternate;
+}
+@media (max-width: 767px) {
+  .last-project ul li {
+    font-size: 14px;
+  }
+}
+/* end Last Project Progress */
+/* start Reminders */
+.reminders ul li .dot {
+  width: 15px;
+  height: 15px;
+}
+.reminders ul li > .blue {
+  border-left: 2px solid var(--blue-color);
+}
+.reminders ul li > .green {
+  border-left: 2px solid var(--green-color);
+}
+.reminders ul li > .orange {
+  border-left: 2px solid var(--orange-color);
+}
+.reminders ul li > .red {
+  border-left: 2px solid var(--red-color);
+}
+/* end Reminders */
+/* start Latest Post */
+.latest-post .top img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+.latest-post .post-content {
+  text-transform: capitalize;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  line-height: 1.7;
+  min-height: 140px;
+  font-weight: 500;
+}
+/* end Latest Post */
+/* start animation */
+@keyframes current {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: var(--blue-color);
+  }
+}
+/* end animation */

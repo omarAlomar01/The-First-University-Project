@@ -45,7 +45,7 @@ ul {
   background-color: #f1f5f9;
 }
 .page .main-title {
-  margin: 20px 20px 40px;
+  margin: 100px 20px 40px;
 }
 .page .main-title::before,
 .page .main-title::after {
@@ -64,12 +64,69 @@ ul {
   background-color: white;
   width: 120px;
 }
+.toggle-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: none;
+}
+.toggle-switch {
+  width: 70px;
+  height: 32px;
+  background-color: #ccc;
+  cursor: pointer;
+  position: relative;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.toggle-switch::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00d";
+  font-weight: 900;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: white;
+  color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
 
+.toggle-checkbox:checked + .toggle-switch::before {
+  content: "\f00c";
+  color: var(--blue-color);
+  left: 42px;
+}
 /* end global rules */
 /* start sidebar */
 .sidebar {
   width: 250px;
   box-shadow: 0px 0px 10px #ddd;
+  z-index: 10;
 }
 .sidebar .sticky {
   position: sticky;
@@ -123,12 +180,12 @@ ul {
     width: 90px;
     padding: 10px;
   }
-  .sidebar > h3 {
+  .sidebar .sticky > h3 {
     font-size: 14px;
     margin-bottom: 15px;
   }
-  .sidebar > h3::before,
-  .sidebar > h3::after {
+  .sidebar .sticky > h3::before,
+  .sidebar .sticky > h3::after {
     display: none;
   }
   .sidebar ul li a {
@@ -136,15 +193,20 @@ ul {
   }
 }
 /* end sidebar */
+
+/*===============================
+========== Dashboard ============
+===============================*/
+
 /* start content */
 .content {
   overflow: hidden;
 }
 .content header {
-  position: sticky;
-  top: 0;
-  background-color: white;
-  z-index: 10;
+  position: fixed;
+  min-height: 80px;
+  box-shadow: 0px 0px 10px #8080803d;
+  z-index: 9;
 }
 .content header .search::before {
   font-family: var(--fa-style-family-classic);
@@ -610,6 +672,230 @@ ul {
 }
 /* end project */
 
+/*===============================
+========== Settings ============
+===============================*/
+
+/* start Site Control */
+.settings-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+@media (max-width: 767px) {
+  .settings-page {
+    grid-template-columns: minmax(100px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.site-control textarea {
+  resize: none;
+  min-height: 150px;
+}
+/* end Site Control */
+/* start General Info */
+.general-info .email {
+  width: calc(100% - 80px);
+  cursor: not-allowed;
+  background-color: #f0f4f8;
+  color: #ccc;
+}
+/* end General Info */
+/* start Security Info */
+.security-info .box:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.security-info .box .button:hover {
+  background-color: var(--blue-alt-color);
+}
+/* end Security Info */
+/* start Social Info */
+.social-info .box {
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.social-info .box i {
+  width: 40px;
+  height: 40px;
+  background-color: #f6f6f6;
+  border-right: 1px solid #ddd;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.social-info .box input[type="text"] {
+  border: none;
+  padding: 12px;
+  background-color: #f6f6f6;
+}
+
+/* end Social Info */
+
+/* start Widgets Control */
+.widget-control .box input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.widget-control .box label {
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.widget-control .box label::before,
+.widget-control .box label::after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.widget-control .box label::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--gray-color);
+}
+.widget-control .box input + label:hover::before {
+  border-color: var(--blue-color);
+}
+.widget-control .box input + label::after {
+  content: "\f00c";
+  font-family: var(--fa-style-family-classic);
+  font-weight: 900;
+  font-size: 12px;
+  width: 19px;
+  height: 19px;
+  color: white;
+  background-color: var(--blue-color);
+  display: grid;
+  place-items: center;
+  transform: scale(0) rotate(360deg);
+  -webkit-transform: scale(0) rotate(360deg);
+  -moz-transform: scale(0) rotate(360deg);
+  -ms-transform: scale(0) rotate(360deg);
+  -o-transform: scale(0) rotate(360deg);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.widget-control .box input:checked + label::after {
+  transform: scale(1) rotate(0deg);
+  -webkit-transform: scale(1) rotate(0deg);
+  -moz-transform: scale(1) rotate(0deg);
+  -ms-transform: scale(1) rotate(0deg);
+  -o-transform: scale(1) rotate(0deg);
+}
+/* end Widgets Control */
+/* start Backup Manager  */
+.backup-manager .backup-date input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.backup-manager .backup-date label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.backup-manager .backup-date input + label::before,
+.backup-manager .backup-date input + label::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.backup-manager .backup-date input[type="radio"] + label::before {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border: 2px solid var(--gray-color);
+  top: 50%;
+  left: 0;
+  margin-top: -11px;
+}
+.backup-manager .backup-date input[type="radio"]:checked + label::before {
+  border-color: var(--blue-color);
+}
+
+.backup-manager .backup-date input[type="radio"] + label::after {
+  width: 0px;
+  height: 0px;
+  background-color: var(--blue-color);
+  left: 11px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.backup-manager .backup-date input[type="radio"]:checked + label::after {
+  width: 14px;
+  height: 14px;
+}
+.backup-manager
+  .backup-date
+  input[type="radio"]:hover:not(:checked)
+  + label::after {
+  background-color: #0077ff44;
+  width: 14px;
+  height: 14px;
+}
+.backup-manager .servers {
+  border-top: 1px solid #ddd;
+}
+.backup-manager .servers input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.backup-manager .servers input[type="radio"] + .server {
+  border: 2px solid #ddd;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.backup-manager .servers input[type="radio"]:checked + .server {
+  border-color: var(--blue-color);
+}
+.backup-manager .servers input[type="radio"] + .server label {
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.backup-manager .servers input[type="radio"]:checked + .server label {
+  color: var(--blue-color);
+}
+/* end Backup Manager  */
 /* start animation */
 @keyframes current {
   0% {
@@ -620,8 +906,3 @@ ul {
   }
 }
 /* end animation */
-.sticky-top {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}

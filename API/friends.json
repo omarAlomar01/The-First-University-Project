@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Omar Alomar",
+    "career": "Front-End Developer",
+    "img": "../img/avatar.png",
+    "friendsNumber": "99",
+    "projectNumber": "15",
+    "articleNumber": "20",
+    "joinDate": "15/2/2022",
+    "phoneNumber": "0123456789",
+    "email": "omar454085@gmail.com"
+  },
+  {
+    "name": "Omar Alomar",
+    "career": "Front-End Developer",
+    "img": "../img/avatar.png",
+    "friendsNumber": "99",
+    "projectNumber": "15",
+    "articleNumber": "20",
+    "joinDate": "15/2/2022",
+    "phoneNumber": "0123456789",
+    "email": "omar454085@gmail.com"
+  },
+  {
+    "name": "Omar Alomar",
+    "career": "Front-End Developer",
+    "img": "../img/avatar.png",
+    "friendsNumber": "99",
+    "projectNumber": "15",
+    "articleNumber": "20",
+    "joinDate": "15/2/2022",
+    "phoneNumber": "0123456789",
+    "email": "omar454085@gmail.com"
+  }
+]

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <!-- font awesome file -->
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <!-- my css framework file -->
+    <link rel="stylesheet" href="CSS/framework.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="CSS/them.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page d-flex">
+      <div class="sidebar bg-white p-20 p-relative">
+        <div class="sticky">
+          <h3 class="p-relative txt-cen mt-0">omar.com</h3>
+          <ul>
+            <li>
+              <a
+                class="d-flex align-cen c-black fs-14 rad-6 p-10 mb-10"
+                href="index.html"
+              >
+                <i class="fa-solid fa-chart-column fa-fw"></i>
+                <span class="fs-14 ml-10 hide-mobile">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="d-flex align-cen c-black fs-14 rad-6 p-10 mb-10"
+                href="settings.html"
+              >
+                <i class="fa-solid fa-gears fa-fw"></i>
+                <span class="fs-14 ml-10 hide-mobile">Settings</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="d-flex align-cen c-black fs-14 rad-6 p-10 mb-10"
+                href="profile.html"
+              >
+                <i class="fa-solid fa-user fa-fw"></i>
+                <span class="fs-14 ml-10 hide-mobile">Profile</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="d-flex align-cen c-black fs-14 rad-6 p-10 mb-10"
+                href="project.html"
+              >
+                <i class="fa-solid fa-diagram-project fa-fw"></i>
+                <span class="fs-14 ml-10 hide-mobile">Project</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="active d-flex align-cen c-black fs-14 rad-6 p-10 mb-10"
+                href="courses.html"
+              >
+                <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                <span class="fs-14 ml-10 hide-mobile">Courses</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="d-flex align-cen c-black fs-14 rad-6 p-10 mb-10"
+                href="friends.html"
+              >
+                <i class="fa-solid fa-user-group fa-fw"></i>
+                <span class="fs-14 ml-10 hide-mobile">Friends</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="d-flex align-cen c-black fs-14 rad-6 p-10 mb-10"
+                href="files.html"
+              >
+                <i class="fa-solid fa-file fa-fw"></i>
+                <span class="fs-14 ml-10 hide-mobile">Files</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="d-flex align-cen c-black fs-14 rad-6 p-10 mb-10"
+                href="plans.html"
+              >
+                <i class="fa-solid fa-credit-card fa-fw"></i>
+                <span class="fs-14 ml-10 hide-mobile">Plans</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content w-full">
+        <header class="bg-white p-20 between-flex">
+          <div class="search p-relative">
+            <input
+              class="p-10 rad-10 b-1-c"
+              type="search"
+              placeholder="Enter A Keyword"
+            />
+          </div>
+          <div class="icon d-flex align-cen">
+            <span class="notification p-relative">
+              <i class="fa-solid fa-bell fa-lg"></i>
+            </span>
+            <img src="img/avatar.png" alt="" />
+          </div>
+        </header>
+        <h1 class="main-title p-relative">Courses</h1>
+        <div class="courses-page d-grid m-20 gap-20">
+          <div class="course bg-white rad-10 p-relative">
+            <img class="cover" src="img/course-01.jpg" />
+            <img class="teacher" src="img/team-01.png" />
+            <div class="text txt-cen-mobile">
+              <h4 class="m-0">Mastering Web Design</h4>
+              <p class="c-gray fs-14 mt-15 mb-15">
+                Master The Art Of Web Designing And Mocking, Prototyping And
+                Creating Web Design Architecture
+              </p>
+            </div>
+            <div class="info p-relative between-flex">
+              <span class="fs-13 c-gray">
+                <i class="fa-regular fa-user"></i>
+                950
+              </span>
+              <span class="btn-shape c-white bg-blue fs-13">Course Info</span>
+              <span class="fs-13 c-gray">
+                <i class="fa-solid fa-dollar-sign"></i>
+                150
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="JavaScript/main.js"></script>
+  </body>
+</html>

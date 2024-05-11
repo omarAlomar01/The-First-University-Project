@@ -1253,7 +1253,7 @@ ul {
 .files-page .file-status {
   min-width: 260px;
 }
-.files-page .file-status i {
+.files-page .file-status div i {
   width: 40px;
   height: 40px;
   margin-right: 10px;
@@ -1273,6 +1273,26 @@ ul {
 .files-page .file-status .size {
   margin-left: auto;
 }
+.files-page .file-status .upload {
+  padding: 10px 15px;
+  margin: 20px auto 10px;
+  position: relative;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.files-page .file-status .upload:hover {
+  background-color: var(--blue-alt-color);
+}
+.files-page .file-status .upload i {
+  margin-right: 10px;
+}
+.files-page .file-status .upload:hover i {
+  animation: up-down 1s alternate infinite;
+  -webkit-animation: up-down 1s alternate infinite;
+}
 .files-page .file-content {
   flex: 1;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1281,12 +1301,80 @@ ul {
 .files-page .file .icon img {
   width: 64px;
   margin: 15px 0;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.files-page .file:hover .icon img {
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
 }
 .files-page .file .info {
   border-top: 1px solid #eee;
 }
 /* end files */
-
+/*===============================
+========== Plans ============
+===============================*/
+/* start plans */
+.plans-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+@media (max-width: 767px) {
+  .plans-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.plans-page .plan .top {
+  border: 3px solid white;
+}
+.plans-page .plan .top.bg-green {
+  outline: 3px solid var(--green-color);
+}
+.plans-page .plan .top.bg-blue {
+  outline: 3px solid var(--blue-color);
+}
+.plans-page .plan .top.bg-orange {
+  outline: 3px solid var(--orange-color);
+}
+.plans-page .plan .price {
+  font-size: 45px;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+.plans-page .plan .price span {
+  font-size: 20px;
+  position: absolute;
+  top: 0px;
+  left: -20px;
+}
+.plans-page .plan ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.plans-page .plan ul li i {
+  color: var(--red-color);
+}
+.plans-page .plan ul li i.yes {
+  color: var(--green-color);
+}
+.plans-page .plan ul li i.help {
+  color: var(--gray-color);
+  margin-left: auto;
+}
+/* end plans */
 /* start animation */
 @keyframes current {
   0% {
@@ -1294,6 +1382,29 @@ ul {
   }
   100% {
     background-color: var(--blue-color);
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
   }
 }
 /* end animation */

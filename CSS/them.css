@@ -958,6 +958,9 @@ ul {
   .profile-page .info-box .toggle-switch {
     margin: auto;
   }
+  .profile-page .info-box .box > div {
+    min-width: 200px;
+  }
 }
 .profile-page .info-box .toggle-switch::before {
   width: 12px;
@@ -986,6 +989,7 @@ ul {
 .data .my-skills ul li span {
   background-color: #eee;
   padding: 4px 10px;
+  margin-bottom: 5px;
   display: inline-flex;
   font-size: 14px;
   border-radius: 6px;
@@ -1023,7 +1027,8 @@ ul {
   -o-border-radius: 50%;
 }
 .data .latest-activities .activity .date {
-  margin-left: 40px;
+  margin-left: auto;
+  text-align: right;
 }
 @media (max-width: 767px) {
   .data .latest-activities .activity img {
@@ -1035,6 +1040,7 @@ ul {
   }
   .data .latest-activities .activity .date {
     margin-left: 0px;
+    text-align: center;
   }
   .data .latest-activities .activity .info > span {
     margin-top: 10px;

@@ -119,6 +119,86 @@
         <div class="friends-page gap-20 m-20 d-grid"></div>
       </div>
     </div>
+    <div class="popup"></div>
+    <!-- <div class="popup">
+      <div class="model">
+        <div class="info">
+          <img class="rad-half" src="img/avatar.png" alt="" />
+          <div>
+            <h2 class="mt-0 mb-10">omar alomar</h2>
+            <div class="fs-15 c-gray">front-end developer</div>
+          </div>
+        </div>
+        <div class="contact">
+          <h4>Contact</h4>
+          <div>
+            <span>Number:</span>
+            <span>+0123456789</span>
+          </div>
+          <div>
+            <span>Email:</span>
+            <span>omar454085@gmail.com</span>
+          </div>
+        </div>
+        <div class="skills">
+          <h4>Skills</h4>
+          <ul>
+            <li class="btn-shape bg-eee w-fit">HTML</li>
+            <li class="btn-shape bg-eee w-fit">CSS</li>
+            <li class="btn-shape bg-eee w-fit">JavaScript</li>
+            <li class="btn-shape bg-eee w-fit">PHP</li>
+            <li class="btn-shape bg-eee w-fit">NODE.JS</li>
+            <li class="btn-shape bg-eee w-fit">Python</li>
+          </ul>
+        </div>
+        <button class="close">X</button>
+      </div>
+    </div> 
+  =================================
+      let friendElement = profileButton.closest(".friend");
+      let number = friendElement.querySelector(".number");
+      let email = friendElement.querySelector(".email");
+      let createPopup = `<div class="popup">
+      <div class="model">
+        <div class="info">
+          <img class="rad-half" src="${friendElement.getElementsByClassName(
+            "avatar"
+          )}" alt="" />
+          <div>
+            <h2 class="mt-0 mb-10">${friendElement.getElementsByClassName(
+              "name"
+            )}</h2>
+            <div class="fs-15 c-gray">${friendElement.getElementsByClassName(
+              "career"
+            )}</div>
+          </div>
+        </div>
+        <div class="contact">
+          <h4>Contact</h4>
+          <div>
+            <span>Number:</span>
+            <span>${number.dataset.num}</span>
+          </div>
+          <div>
+            <span>Email:</span>
+            <span>${email.dataset.email}</span>
+          </div>
+        </div>
+        <div class="skills">
+          <h4>Skills</h4>
+          <ul>
+            <li class="btn-shape bg-eee w-fit">HTML</li>
+            <li class="btn-shape bg-eee w-fit">CSS</li>
+            <li class="btn-shape bg-eee w-fit">JavaScript</li>
+            <li class="btn-shape bg-eee w-fit">PHP</li>
+            <li class="btn-shape bg-eee w-fit">NODE.JS</li>
+            <li class="btn-shape bg-eee w-fit">Python</li>
+          </ul>
+        </div>
+        <button class="close">X</button>
+      </div>
+    </div>`;
+  -->
     <script src="JavaScript/main.js"></script>
     <script src="JavaScript/friends.js"></script>
   </body>

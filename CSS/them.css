@@ -1,4 +1,4 @@
-/* start gobal rules */
+/* start global rules */
 :root {
   --blue-color: #0075ff;
   --blue-alt-color: #0d69d5;
@@ -115,7 +115,6 @@ ul {
 .toggle-checkbox:checked + .toggle-switch {
   background-color: var(--blue-color);
 }
-
 .toggle-checkbox:checked + .toggle-switch::before {
   content: "\f00c";
   color: var(--blue-color);
@@ -225,7 +224,7 @@ ul {
 }
 .content header .search input[type="search"] {
   width: 150px;
-  padding-left: 30px;
+  padding-left: 25px;
   transition: width 0.4s;
   -webkit-transition: width 0.4s;
   -moz-transition: width 0.4s;
@@ -404,7 +403,7 @@ ul {
 /* end target */
 /* start Tickets */
 .ticket .box {
-  width: calc(50% - 10px);
+  width: calc(50% - 15px);
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -1163,6 +1162,7 @@ ul {
 }
 .courses-page .course .cover {
   width: 100%;
+  height: 225px;
 }
 .courses-page .course .teacher {
   width: 64px;
@@ -1245,6 +1245,114 @@ ul {
 .friends-page .friend .icon {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+}
+/* styling popup */
+.popup {
+  width: 100%;
+  height: 100%;
+  background-color: #0000005e;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.popup .model {
+  width: 600px;
+  min-height: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px #0009;
+}
+.popup .model .close {
+  width: 25px;
+  height: 25px;
+  color: #000000b3;
+  background-color: var(--gray-color);
+  border: none;
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--gray-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.popup .model .close:hover {
+  background-color: var(--red-color);
+  color: white;
+}
+.popup .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #c6c6c6;
+}
+.popup .info img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+.popup .contact {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid #c6c6c6;
+}
+.popup h4 {
+  margin: 5px auto 10px;
+}
+.popup .contact div:not(:last-child) {
+  margin-bottom: 10px;
+}
+.popup .contact div span:not(:last-child) {
+  font-size: 18px;
+  color: gray;
+}
+.popup .skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.popup ul {
+  margin: 0;
+  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.popup ul li {
+  font-size: 15px;
 }
 
 /* end friends */

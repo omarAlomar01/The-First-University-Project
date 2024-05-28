@@ -1,0 +1,74 @@
+[
+  {
+    "courseImg": "../img/course-01.jpg",
+    "teacherImg": "../img/team-01.png",
+    "title": "Mastering Web Design",
+    "info": "Master The Art Of Web Designing And Mocking, Prototyping And Creating Web Design Architecture",
+    "customers": "654",
+    "price": "150"
+  },
+  {
+    "courseImg": "../img/course-02.jpg",
+    "teacherImg": "../img/team-02.png",
+    "title": "Web Accessibility",
+    "info": "Ensure Websites Are Accessible To All Users, Including Those With Disabilities",
+    "customers": "400",
+    "price": "210"
+  },
+  {
+    "courseImg": "../img/course-03.jpg",
+    "teacherImg": "../img/team-03.png",
+    "title": "Responsive Web Development",
+    "info": "Create Websites That Work Seamlessly Across Different Devices",
+    "customers": "789",
+    "price": "180"
+  },
+  {
+    "courseImg": "../img/course-04.jpg",
+    "teacherImg": "../img/team-04.png",
+    "title": "Front-End Frameworks",
+    "info": "Explore Popular Front-End Frameworks Like React, Angular, And Vue.js",
+    "customers": "432",
+    "price": "220"
+  },
+  {
+    "courseImg": "../img/course-05.jpg",
+    "teacherImg": "../img/team-05.png",
+    "title": "Back-End Development",
+    "info": "Dive Into Back-End Technologies Such As Node.js, Django, And Ruby on Rails",
+    "customers": "600",
+    "price": "190"
+  },
+  {
+    "courseImg": "../img/course-06.jpg",
+    "teacherImg": "../img/team-01.png",
+    "title": "Mobile App Design",
+    "info": "Learn How To Design User-Friendly Mobile Applications",
+    "customers": "345",
+    "price": "170"
+  },
+  {
+    "courseImg": "../img/course-07.jpg",
+    "teacherImg": "../img/team-07.jpeg",
+    "title": "E-Commerce Website Development",
+    "info": "Build E-Commerce Platforms With Payment Integration And Security",
+    "customers": "700",
+    "price": "240"
+  },
+  {
+    "courseImg": "../img/course-08.jpeg",
+    "teacherImg": "../img/team-08.jpeg",
+    "title": "SEO Fundamentals",
+    "info": "Optimize Websites For Search Engines And Improve Visibility",
+    "customers": "512",
+    "price": "160"
+  },
+  {
+    "courseImg": "../img/course-09.jpg",
+    "teacherImg": "../img/team-09.jpeg",
+    "title": "Advanced UI/UX Design",
+    "info": "Learn Advanced Techniques For User Interface And User Experience Design",
+    "customers": "512",
+    "price": "200"
+  }
+]
